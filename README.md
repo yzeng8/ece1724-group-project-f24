@@ -1,6 +1,37 @@
 # ece1724-group-project-f24
 
-## GraphX Instruction
+## 1.GraphX Configuration Instruction
+
+### Step 1 Java Installation
+```
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+```
+
+### Step2: Spark Installation
+```
+## Get the packages
+wget https://downloads.apache.org/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz
+tar -xvzf spark-3.4.4-bin-hadoop3.tgz
+sudo mv spark-3.4.4-bin-hadoop3 /opt/spark
+
+## Set Environmental Variables
+echo "export SPARK_HOME=/opt/spark" >> ~/.bashrc
+echo "export PATH=\$SPARK_HOME/bin:\$SPARK_HOME/sbin:\$PATH" >> ~/.bashrc
+source ~/.bashrc
+
+
+```
+
+### Step3:
+
+```
+
+
+```
+
+
+## 2. GraphX Running Instruction
 
 
 
