@@ -23,11 +23,10 @@ source ~/.bashrc
 
 ```
 
-### Step3:
+### Step3: Verify Installtion
 
 ```
-
-
+spark-shell
 ```
 
 
