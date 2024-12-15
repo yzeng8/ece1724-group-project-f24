@@ -1,11 +1,18 @@
 # ece1724-group-project-f24
 
-## 1.GraphX Configuration Instruction
+## 1.GraphX Configuration Instruction On Linux System
 
-### Step 1 Java Installation
+### Step 1 Programming Languages Preparatin: Java & Python & Scala Installation
 ```
-sudo apt update
+sudo apt update && sudo apt update && sudo apt upgrade -y
 sudo apt install openjdk-11-jdk -y
+java -version # Check Java version
+sudo apt install python3 python3-pip -y
+python3 --version
+pip3 --version # Check Python version
+sudo apt install scala -y
+scala -version # Check Scala version
+
 ```
 
 ### Step2: Spark Installation
@@ -16,11 +23,15 @@ tar -xvzf spark-3.4.4-bin-hadoop3.tgz
 sudo mv spark-3.4.4-bin-hadoop3 /opt/spark
 
 ## Set Environmental Variables
-echo "export SPARK_HOME=/opt/spark" >> ~/.bashrc
-echo "export PATH=\$SPARK_HOME/bin:\$SPARK_HOME/sbin:\$PATH" >> ~/.bashrc
+vim ~/.bashrc
+# insert into the first line of the file
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
+export PYSPARK_PYTHON=python3
+# save and exit
+
 source ~/.bashrc
-
-
 ```
 
 ### Step3: Verify Installtion
