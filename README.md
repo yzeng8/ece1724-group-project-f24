@@ -60,3 +60,15 @@ jar -cf graphx-twitter-1k.jar *.class
 spark-submit --class TwitterGraphProcessing1k --master local[*] --driver-memory 1g --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 graphx-twitter-1k.jar
 ```
 where -class is the objectname of your scala script.
+
+
+
+
+
+## General Running Instruction
+```
+scalac -classpath "/opt/spark/jars/*" graphx-twitter-PR.scala
+jar -cf graphXtwitterPR\.jar *.class
+
+spark-submit --class graphXtwitterPR --master local[*] --driver-memory 2g --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 graphXtwitterPR.jar file:///home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt 1
+ ```
