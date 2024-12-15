@@ -5,7 +5,7 @@
 ### Step 1 Java Installation
 ```
 sudo apt update
-sudo apt install openjdk-17-jdk -y
+sudo apt install openjdk-11-jdk -y
 ```
 
 ### Step2: Spark Installation
