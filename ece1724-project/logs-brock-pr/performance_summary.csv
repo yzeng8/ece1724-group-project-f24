@@ -1,0 +1,3 @@
+Dataset,Avg CPU Usage (%),Avg Memory Usage (%),Avg Disk Utilization (%),Avg Throughput (kB/s)
+brock400_4.clq,15.0,23.27,4.46,9.38
+brock800_4.clq,14.94,23.27,4.46,9.4

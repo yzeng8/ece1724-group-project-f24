@@ -1,0 +1,431 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/zengyuyang1999/.ivy2/cache
+The jars for the packages stored in: /home/zengyuyang1999/.ivy2/jars
+org.apache.spark#spark-graphx_2.12 added as a dependency
+graphframes#graphframes added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-aa247b46-2bf3-4f90-8538-89c290b19aca;1.0
+	confs: [default]
+	found graphframes#graphframes;0.8.3-spark3.4-s_2.12 in spark-packages
+	found org.slf4j#slf4j-api;1.7.16 in central
+:: resolution report :: resolve 182ms :: artifacts dl 9ms
+	:: modules in use:
+	graphframes#graphframes;0.8.3-spark3.4-s_2.12 from spark-packages in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-aa247b46-2bf3-4f90-8538-89c290b19aca
+	confs: [default]
+	0 artifacts copied, 2 already retrieved (0kB/8ms)
+24/12/15 07:11:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/12/15 07:11:26 INFO SparkContext: Running Spark version 3.4.4
+24/12/15 07:11:26 INFO ResourceUtils: ==============================================================
+24/12/15 07:11:26 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/12/15 07:11:26 INFO ResourceUtils: ==============================================================
+24/12/15 07:11:26 INFO SparkContext: Submitted application: TwitterGraphProcessing
+24/12/15 07:11:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/12/15 07:11:26 INFO ResourceProfile: Limiting resource is cpu
+24/12/15 07:11:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/12/15 07:11:26 INFO SecurityManager: Changing view acls to: zengyuyang1999
+24/12/15 07:11:26 INFO SecurityManager: Changing modify acls to: zengyuyang1999
+24/12/15 07:11:26 INFO SecurityManager: Changing view acls groups to: 
+24/12/15 07:11:26 INFO SecurityManager: Changing modify acls groups to: 
+24/12/15 07:11:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: zengyuyang1999; groups with view permissions: EMPTY; users with modify permissions: zengyuyang1999; groups with modify permissions: EMPTY
+24/12/15 07:11:27 INFO Utils: Successfully started service 'sparkDriver' on port 39675.
+24/12/15 07:11:27 INFO SparkEnv: Registering MapOutputTracker
+24/12/15 07:11:27 INFO SparkEnv: Registering BlockManagerMaster
+24/12/15 07:11:27 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/12/15 07:11:27 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/12/15 07:11:27 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/12/15 07:11:27 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-630c9c65-9c58-43b5-ad71-b5e1d73c7dfa
+24/12/15 07:11:27 INFO MemoryStore: MemoryStore started with capacity 4.6 GiB
+24/12/15 07:11:27 INFO SparkEnv: Registering OutputCommitCoordinator
+24/12/15 07:11:27 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/12/15 07:11:27 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/12/15 07:11:27 INFO SparkContext: Added JAR file:///home/zengyuyang1999/.ivy2/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar with timestamp 1734246686776
+24/12/15 07:11:27 INFO SparkContext: Added JAR file:///home/zengyuyang1999/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1734246686776
+24/12/15 07:11:27 INFO SparkContext: Added JAR file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/graphXtwitterPR.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphXtwitterPR.jar with timestamp 1734246686776
+24/12/15 07:11:28 INFO Executor: Starting executor ID driver on host google-vm1.northamerica-northeast2-a.c.ece1724-project.internal
+24/12/15 07:11:28 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/12/15 07:11:28 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar with timestamp 1734246686776
+24/12/15 07:11:28 INFO TransportClientFactory: Successfully created connection to google-vm1.northamerica-northeast2-a.c.ece1724-project.internal/10.188.0.2:39675 after 40 ms (0 ms spent in bootstraps)
+24/12/15 07:11:28 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar to /tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/fetchFileTemp17359894948855562021.tmp
+24/12/15 07:11:28 INFO Executor: Adding file:/tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar to class loader
+24/12/15 07:11:28 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphXtwitterPR.jar with timestamp 1734246686776
+24/12/15 07:11:28 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/graphXtwitterPR.jar to /tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/fetchFileTemp10553545966292893972.tmp
+24/12/15 07:11:28 INFO Executor: Adding file:/tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/graphXtwitterPR.jar to class loader
+24/12/15 07:11:28 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1734246686776
+24/12/15 07:11:28 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:39675/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/fetchFileTemp5879444289664383007.tmp
+24/12/15 07:11:28 INFO Executor: Adding file:/tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3/userFiles-2e33e23e-70b0-46a5-a2e0-e99415a394e1/org.slf4j_slf4j-api-1.7.16.jar to class loader
+24/12/15 07:11:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38483.
+24/12/15 07:11:28 INFO NettyBlockTransferService: Server created on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:38483
+24/12/15 07:11:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/12/15 07:11:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 38483, None)
+24/12/15 07:11:28 INFO BlockManagerMasterEndpoint: Registering block manager google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:38483 with 4.6 GiB RAM, BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 38483, None)
+24/12/15 07:11:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 38483, None)
+24/12/15 07:11:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 38483, None)
+24/12/15 07:11:29 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.5 KiB, free 4.6 GiB)
+24/12/15 07:11:29 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.7 KiB, free 4.6 GiB)
+24/12/15 07:11:29 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:38483 (size: 32.7 KiB, free: 4.6 GiB)
+24/12/15 07:11:29 INFO SparkContext: Created broadcast 0 from textFile at graphx-twitter-PR.scala:25
+24/12/15 07:11:30 INFO FileInputFormat: Total input files to process : 1
+24/12/15 07:11:30 INFO SparkContext: Starting job: fold at VertexRDDImpl.scala:90
+24/12/15 07:11:30 INFO DAGScheduler: Registering RDD 12 (mapPartitions at VertexRDD.scala:356) as input to shuffle 1
+24/12/15 07:11:30 INFO DAGScheduler: Registering RDD 4 (distinct at graphx-twitter-PR.scala:34) as input to shuffle 2
+24/12/15 07:11:30 INFO DAGScheduler: Registering RDD 7 (map at graphx-twitter-PR.scala:36) as input to shuffle 0
+24/12/15 07:11:30 INFO DAGScheduler: Got job 0 (fold at VertexRDDImpl.scala:90) with 101 output partitions
+24/12/15 07:11:30 INFO DAGScheduler: Final stage: ResultStage 3 (fold at VertexRDDImpl.scala:90)
+24/12/15 07:11:30 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0, ShuffleMapStage 2)
+24/12/15 07:11:30 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0, ShuffleMapStage 2)
+24/12/15 07:11:30 INFO DAGScheduler: Submitting ShuffleMapStage 0 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[12] at mapPartitions at VertexRDD.scala:356), which has no missing parents
+24/12/15 07:11:30 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.6 KiB, free 4.6 GiB)
+24/12/15 07:11:30 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 4.6 GiB)
+24/12/15 07:11:30 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:38483 (size: 4.2 KiB, free: 4.6 GiB)
+24/12/15 07:11:30 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:11:30 INFO DAGScheduler: Submitting 101 missing tasks from ShuffleMapStage 0 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[12] at mapPartitions at VertexRDD.scala:356) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/12/15 07:11:30 INFO TaskSchedulerImpl: Adding task set 0.0 with 101 tasks resource profile 0
+24/12/15 07:11:30 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[4] at distinct at graphx-twitter-PR.scala:34), which has no missing parents
+24/12/15 07:11:31 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.5 KiB, free 4.6 GiB)
+24/12/15 07:11:31 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 4.6 GiB)
+24/12/15 07:11:31 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:38483 (size: 4.3 KiB, free: 4.6 GiB)
+24/12/15 07:11:31 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:11:31 INFO DAGScheduler: Submitting 101 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[4] at distinct at graphx-twitter-PR.scala:34) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/12/15 07:11:31 INFO TaskSchedulerImpl: Adding task set 1.0 with 101 tasks resource profile 0
+24/12/15 07:11:31 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:31 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:31 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 2, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:31 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 3, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:31 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+24/12/15 07:11:31 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/12/15 07:11:31 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+24/12/15 07:11:31 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+24/12/15 07:11:31 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:0+33554432
+24/12/15 07:11:31 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:67108864+33554432
+24/12/15 07:11:31 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:100663296+33554432
+24/12/15 07:11:31 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:33554432+33554432
+24/12/15 07:11:49 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1370 bytes result sent to driver
+24/12/15 07:11:49 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1327 bytes result sent to driver
+24/12/15 07:11:49 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1327 bytes result sent to driver
+24/12/15 07:11:49 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 4, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:49 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+24/12/15 07:11:49 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 5, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:49 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+24/12/15 07:11:49 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 6, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:49 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+24/12/15 07:11:49 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:201326592+33554432
+24/12/15 07:11:49 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:167772160+33554432
+24/12/15 07:11:49 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:134217728+33554432
+24/12/15 07:11:49 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 18221 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/101)
+24/12/15 07:11:49 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 18230 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/101)
+24/12/15 07:11:49 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 18261 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (3/101)
+24/12/15 07:11:49 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1327 bytes result sent to driver
+24/12/15 07:11:49 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 7, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:11:49 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+24/12/15 07:11:49 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 18271 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (4/101)
+24/12/15 07:11:49 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:234881024+33554432
+24/12/15 07:12:05 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 1327 bytes result sent to driver
+24/12/15 07:12:05 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 8, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:05 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+24/12/15 07:12:05 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 16531 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (5/101)
+24/12/15 07:12:05 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:268435456+33554432
+24/12/15 07:12:05 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1327 bytes result sent to driver
+24/12/15 07:12:05 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 9, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:05 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 16642 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (6/101)
+24/12/15 07:12:05 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+24/12/15 07:12:05 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:301989888+33554432
+24/12/15 07:12:06 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 1327 bytes result sent to driver
+24/12/15 07:12:06 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 10, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:06 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 16799 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (7/101)
+24/12/15 07:12:06 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+24/12/15 07:12:06 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:335544320+33554432
+24/12/15 07:12:06 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 1327 bytes result sent to driver
+24/12/15 07:12:06 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 11, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:06 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+24/12/15 07:12:06 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 16796 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (8/101)
+24/12/15 07:12:06 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:369098752+33554432
+24/12/15 07:12:20 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 1327 bytes result sent to driver
+24/12/15 07:12:20 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 12, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:20 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+24/12/15 07:12:20 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 14918 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (9/101)
+24/12/15 07:12:20 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 1327 bytes result sent to driver
+24/12/15 07:12:20 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 13, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:20 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 14820 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (10/101)
+24/12/15 07:12:20 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+24/12/15 07:12:20 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:402653184+33554432
+24/12/15 07:12:20 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:436207616+33554432
+24/12/15 07:12:20 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 1327 bytes result sent to driver
+24/12/15 07:12:20 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 14, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:20 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+24/12/15 07:12:20 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 14866 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (11/101)
+24/12/15 07:12:20 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:469762048+33554432
+24/12/15 07:12:20 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 1327 bytes result sent to driver
+24/12/15 07:12:21 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 15, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:21 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+24/12/15 07:12:21 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 14953 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (12/101)
+24/12/15 07:12:21 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:503316480+33554432
+24/12/15 07:12:21 ERROR Executor: Exception in task 12.0 in stage 0.0 (TID 12)
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+24/12/15 07:12:21 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 16, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:21 INFO Executor: Running task 16.0 in stage 0.0 (TID 16)
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 12.0 in stage 0.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+24/12/15 07:12:21 ERROR TaskSetManager: Task 12 in stage 0.0 failed 1 times; aborting job
+24/12/15 07:12:21 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:536870912+33554432
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Cancelling stage 0
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 15.0 in stage 0.0 (TID 15), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 16.0 in stage 0.0 (TID 16), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor killed task 16.0 in stage 0.0 (TID 16), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 13.0 in stage 0.0 (TID 13), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 14.0 in stage 0.0 (TID 14), reason: Stage cancelled
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Stage 0 was cancelled
+24/12/15 07:12:21 INFO Executor: Executor killed task 14.0 in stage 0.0 (TID 14), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor killed task 15.0 in stage 0.0 (TID 15), reason: Stage cancelled
+24/12/15 07:12:21 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 17) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:21 INFO Executor: Running task 0.0 in stage 1.0 (TID 17)
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 16.0 in stage 0.0 (TID 16) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 INFO Executor: Executor killed task 13.0 in stage 0.0 (TID 13), reason: Stage cancelled
+24/12/15 07:12:21 INFO DAGScheduler: ShuffleMapStage 0 (mapPartitions at VertexRDD.scala:356) failed in 50.365 s due to Job aborted due to stage failure: Task 12 in stage 0.0 failed 1 times, most recent failure: Lost task 12.0 in stage 0.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+24/12/15 07:12:21 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 18) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:21 INFO Executor: Running task 1.0 in stage 1.0 (TID 18)
+24/12/15 07:12:21 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 19) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 2, PROCESS_LOCAL, 8846 bytes) 
+24/12/15 07:12:21 INFO Executor: Running task 2.0 in stage 1.0 (TID 19)
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Cancelling stage 1
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 2.0 in stage 1.0 (TID 19), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 0.0 in stage 1.0 (TID 17), reason: Stage cancelled
+24/12/15 07:12:21 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:0+33554432
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Stage 1 was cancelled
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 15.0 in stage 0.0 (TID 15) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 14.0 in stage 0.0 (TID 14) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 INFO DAGScheduler: ShuffleMapStage 1 (distinct at graphx-twitter-PR.scala:34) failed in 50.196 s due to Job aborted due to stage failure: Task 12 in stage 0.0 failed 1 times, most recent failure: Lost task 12.0 in stage 0.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+24/12/15 07:12:21 INFO Executor: Executor is trying to kill task 1.0 in stage 1.0 (TID 18), reason: Stage cancelled
+24/12/15 07:12:21 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:33554432+33554432
+24/12/15 07:12:21 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-200m.txt:67108864+33554432
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 13.0 in stage 0.0 (TID 13) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/12/15 07:12:21 INFO DAGScheduler: Job 0 failed: fold at VertexRDDImpl.scala:90, took 50.922638 s
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 12 in stage 0.0 failed 1 times, most recent failure: Lost task 12.0 in stage 0.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2790)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2726)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2725)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2725)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1211)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1211)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1211)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2989)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2928)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2917)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:976)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2353)
+	at org.apache.spark.rdd.RDD.$anonfun$fold$1(RDD.scala:1175)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:408)
+	at org.apache.spark.rdd.RDD.fold(RDD.scala:1169)
+	at org.apache.spark.graphx.impl.VertexRDDImpl.count(VertexRDDImpl.scala:90)
+	at graphXtwitterPR$.main(graphx-twitter-PR.scala:42)
+	at graphXtwitterPR.main(graphx-twitter-PR.scala)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1020)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:192)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:215)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1111)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at graphXtwitterPR$.$anonfun$main$1(graphx-twitter-PR.scala:30)
+	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1(EdgeRDD.scala:107)
+	at org.apache.spark.graphx.EdgeRDD$.$anonfun$fromEdges$1$adapted(EdgeRDD.scala:105)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2(RDD.scala:908)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndex$2$adapted(RDD.scala:908)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+24/12/15 07:12:21 INFO SparkContext: Invoking stop() from shutdown hook
+24/12/15 07:12:21 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/12/15 07:12:21 INFO Executor: Executor killed task 2.0 in stage 1.0 (TID 19), reason: Stage cancelled
+24/12/15 07:12:21 INFO Executor: Executor killed task 1.0 in stage 1.0 (TID 18), reason: Stage cancelled
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 2.0 in stage 1.0 (TID 19) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 1.0 in stage 1.0 (TID 18) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 INFO Executor: Executor killed task 0.0 in stage 1.0 (TID 17), reason: Stage cancelled
+24/12/15 07:12:21 WARN TaskSetManager: Lost task 0.0 in stage 1.0 (TID 17) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal executor driver): TaskKilled (Stage cancelled)
+24/12/15 07:12:21 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/12/15 07:12:21 INFO SparkUI: Stopped Spark web UI at http://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:4040
+24/12/15 07:12:21 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/12/15 07:12:21 INFO MemoryStore: MemoryStore cleared
+24/12/15 07:12:21 INFO BlockManager: BlockManager stopped
+24/12/15 07:12:21 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/12/15 07:12:21 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/12/15 07:12:21 INFO SparkContext: Successfully stopped SparkContext
+24/12/15 07:12:21 INFO ShutdownHookManager: Shutdown hook called
+24/12/15 07:12:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-f9a1e104-d373-4df2-8670-a72ae880caf3
+24/12/15 07:12:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-8eeba69c-4e2e-40b0-afa2-73ce057d7680

@@ -1,0 +1,608 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/zengyuyang1999/.ivy2/cache
+The jars for the packages stored in: /home/zengyuyang1999/.ivy2/jars
+org.apache.spark#spark-graphx_2.12 added as a dependency
+graphframes#graphframes added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-cb669d80-4c12-4f50-a8f1-2ca90f39f277;1.0
+	confs: [default]
+	found graphframes#graphframes;0.8.3-spark3.4-s_2.12 in spark-packages
+	found org.slf4j#slf4j-api;1.7.16 in central
+:: resolution report :: resolve 207ms :: artifacts dl 9ms
+	:: modules in use:
+	graphframes#graphframes;0.8.3-spark3.4-s_2.12 from spark-packages in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-cb669d80-4c12-4f50-a8f1-2ca90f39f277
+	confs: [default]
+	0 artifacts copied, 2 already retrieved (0kB/9ms)
+24/12/15 07:06:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/12/15 07:06:47 INFO SparkContext: Running Spark version 3.4.4
+24/12/15 07:06:47 INFO ResourceUtils: ==============================================================
+24/12/15 07:06:47 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/12/15 07:06:47 INFO ResourceUtils: ==============================================================
+24/12/15 07:06:47 INFO SparkContext: Submitted application: TwitterGraphProcessing
+24/12/15 07:06:47 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/12/15 07:06:47 INFO ResourceProfile: Limiting resource is cpu
+24/12/15 07:06:47 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/12/15 07:06:47 INFO SecurityManager: Changing view acls to: zengyuyang1999
+24/12/15 07:06:47 INFO SecurityManager: Changing modify acls to: zengyuyang1999
+24/12/15 07:06:47 INFO SecurityManager: Changing view acls groups to: 
+24/12/15 07:06:47 INFO SecurityManager: Changing modify acls groups to: 
+24/12/15 07:06:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: zengyuyang1999; groups with view permissions: EMPTY; users with modify permissions: zengyuyang1999; groups with modify permissions: EMPTY
+24/12/15 07:06:48 INFO Utils: Successfully started service 'sparkDriver' on port 32889.
+24/12/15 07:06:48 INFO SparkEnv: Registering MapOutputTracker
+24/12/15 07:06:48 INFO SparkEnv: Registering BlockManagerMaster
+24/12/15 07:06:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/12/15 07:06:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/12/15 07:06:48 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/12/15 07:06:48 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f0cbe636-e209-41d8-8c00-90d1e6d644e7
+24/12/15 07:06:48 INFO MemoryStore: MemoryStore started with capacity 4.6 GiB
+24/12/15 07:06:48 INFO SparkEnv: Registering OutputCommitCoordinator
+24/12/15 07:06:48 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/12/15 07:06:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/12/15 07:06:48 INFO SparkContext: Added JAR file:///home/zengyuyang1999/.ivy2/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar with timestamp 1734246407540
+24/12/15 07:06:48 INFO SparkContext: Added JAR file:///home/zengyuyang1999/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1734246407540
+24/12/15 07:06:48 INFO SparkContext: Added JAR file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/graphXtwitterPR.jar at spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphXtwitterPR.jar with timestamp 1734246407540
+24/12/15 07:06:48 INFO Executor: Starting executor ID driver on host google-vm1.northamerica-northeast2-a.c.ece1724-project.internal
+24/12/15 07:06:48 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/12/15 07:06:48 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphXtwitterPR.jar with timestamp 1734246407540
+24/12/15 07:06:48 INFO TransportClientFactory: Successfully created connection to google-vm1.northamerica-northeast2-a.c.ece1724-project.internal/10.188.0.2:32889 after 68 ms (0 ms spent in bootstraps)
+24/12/15 07:06:48 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphXtwitterPR.jar to /tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/fetchFileTemp6313958035479279265.tmp
+24/12/15 07:06:49 INFO Executor: Adding file:/tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/graphXtwitterPR.jar to class loader
+24/12/15 07:06:49 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1734246407540
+24/12/15 07:06:49 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/fetchFileTemp1311901910766629031.tmp
+24/12/15 07:06:49 INFO Executor: Adding file:/tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/org.slf4j_slf4j-api-1.7.16.jar to class loader
+24/12/15 07:06:49 INFO Executor: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar with timestamp 1734246407540
+24/12/15 07:06:49 INFO Utils: Fetching spark://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:32889/jars/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar to /tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/fetchFileTemp18035051341118852050.tmp
+24/12/15 07:06:49 INFO Executor: Adding file:/tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801/userFiles-5cb3c70c-995a-4e96-ab2d-9b000831583d/graphframes_graphframes-0.8.3-spark3.4-s_2.12.jar to class loader
+24/12/15 07:06:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33569.
+24/12/15 07:06:49 INFO NettyBlockTransferService: Server created on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569
+24/12/15 07:06:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/12/15 07:06:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 33569, None)
+24/12/15 07:06:49 INFO BlockManagerMasterEndpoint: Registering block manager google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 with 4.6 GiB RAM, BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 33569, None)
+24/12/15 07:06:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 33569, None)
+24/12/15 07:06:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, 33569, None)
+24/12/15 07:06:50 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.5 KiB, free 4.6 GiB)
+24/12/15 07:06:50 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.7 KiB, free 4.6 GiB)
+24/12/15 07:06:50 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 32.7 KiB, free: 4.6 GiB)
+24/12/15 07:06:50 INFO SparkContext: Created broadcast 0 from textFile at graphx-twitter-PR.scala:25
+24/12/15 07:06:50 INFO FileInputFormat: Total input files to process : 1
+24/12/15 07:06:51 INFO SparkContext: Starting job: fold at VertexRDDImpl.scala:90
+24/12/15 07:06:51 INFO DAGScheduler: Registering RDD 12 (mapPartitions at VertexRDD.scala:356) as input to shuffle 1
+24/12/15 07:06:51 INFO DAGScheduler: Registering RDD 4 (distinct at graphx-twitter-PR.scala:34) as input to shuffle 2
+24/12/15 07:06:51 INFO DAGScheduler: Registering RDD 7 (map at graphx-twitter-PR.scala:36) as input to shuffle 0
+24/12/15 07:06:51 INFO DAGScheduler: Got job 0 (fold at VertexRDDImpl.scala:90) with 2 output partitions
+24/12/15 07:06:51 INFO DAGScheduler: Final stage: ResultStage 3 (fold at VertexRDDImpl.scala:90)
+24/12/15 07:06:51 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0, ShuffleMapStage 2)
+24/12/15 07:06:51 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0, ShuffleMapStage 2)
+24/12/15 07:06:51 INFO DAGScheduler: Submitting ShuffleMapStage 0 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[12] at mapPartitions at VertexRDD.scala:356), which has no missing parents
+24/12/15 07:06:51 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.6 KiB, free 4.6 GiB)
+24/12/15 07:06:51 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 4.6 GiB)
+24/12/15 07:06:51 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.2 KiB, free: 4.6 GiB)
+24/12/15 07:06:51 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:51 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[12] at mapPartitions at VertexRDD.scala:356) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:51 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+24/12/15 07:06:51 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[4] at distinct at graphx-twitter-PR.scala:34), which has no missing parents
+24/12/15 07:06:51 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.5 KiB, free 4.6 GiB)
+24/12/15 07:06:51 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 4.6 GiB)
+24/12/15 07:06:51 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.3 KiB, free: 4.6 GiB)
+24/12/15 07:06:51 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:51 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[4] at distinct at graphx-twitter-PR.scala:34) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:51 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+24/12/15 07:06:51 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:51 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:51 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:51 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:51 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+24/12/15 07:06:51 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+24/12/15 07:06:51 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/12/15 07:06:51 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+24/12/15 07:06:52 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:0+8431
+24/12/15 07:06:52 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:8431+8431
+24/12/15 07:06:52 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:0+8431
+24/12/15 07:06:52 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:8431+8431
+24/12/15 07:06:52 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1354 bytes result sent to driver
+24/12/15 07:06:52 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1225 bytes result sent to driver
+24/12/15 07:06:52 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1354 bytes result sent to driver
+24/12/15 07:06:52 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1225 bytes result sent to driver
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 676 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 665 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 707 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:52 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 670 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:52 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/12/15 07:06:52 INFO DAGScheduler: ShuffleMapStage 0 (mapPartitions at VertexRDD.scala:356) finished in 0.962 s
+24/12/15 07:06:52 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:52 INFO DAGScheduler: running: Set(ShuffleMapStage 1)
+24/12/15 07:06:52 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+24/12/15 07:06:52 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:52 INFO DAGScheduler: ShuffleMapStage 1 (distinct at graphx-twitter-PR.scala:34) finished in 0.786 s
+24/12/15 07:06:52 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:52 INFO DAGScheduler: running: Set()
+24/12/15 07:06:52 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+24/12/15 07:06:52 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:52 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[7] at map at graphx-twitter-PR.scala:36), which has no missing parents
+24/12/15 07:06:52 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.3 KiB, free 4.6 GiB)
+24/12/15 07:06:52 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 4.6 GiB)
+24/12/15 07:06:52 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 3.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:52 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:52 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[7] at map at graphx-twitter-PR.scala:36) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:52 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+24/12/15 07:06:52 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, NODE_LOCAL, 8554 bytes) 
+24/12/15 07:06:52 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, NODE_LOCAL, 8554 bytes) 
+24/12/15 07:06:52 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+24/12/15 07:06:52 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 2 (5.3 KiB) non-empty blocks including 2 (5.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 2 (5.3 KiB) non-empty blocks including 2 (5.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 19 ms
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 19 ms
+24/12/15 07:06:52 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 1999 bytes result sent to driver
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 234 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:52 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 1999 bytes result sent to driver
+24/12/15 07:06:52 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 243 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:52 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/12/15 07:06:52 INFO DAGScheduler: ShuffleMapStage 2 (map at graphx-twitter-PR.scala:36) finished in 0.274 s
+24/12/15 07:06:52 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:52 INFO DAGScheduler: running: Set()
+24/12/15 07:06:52 INFO DAGScheduler: waiting: Set(ResultStage 3)
+24/12/15 07:06:52 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:52 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[20] at map at VertexRDDImpl.scala:90), which has no missing parents
+24/12/15 07:06:52 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 7.8 KiB, free 4.6 GiB)
+24/12/15 07:06:52 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.1 KiB, free 4.6 GiB)
+24/12/15 07:06:52 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.1 KiB, free: 4.6 GiB)
+24/12/15 07:06:52 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:52 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[20] at map at VertexRDDImpl.scala:90) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:52 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+24/12/15 07:06:52 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, NODE_LOCAL, 8837 bytes) 
+24/12/15 07:06:52 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, NODE_LOCAL, 8837 bytes) 
+24/12/15 07:06:52 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+24/12/15 07:06:52 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 1 (11.1 KiB) non-empty blocks including 1 (11.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 2 (5.9 KiB) non-empty blocks including 2 (5.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 1 (11.1 KiB) non-empty blocks including 1 (11.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Getting 2 (5.9 KiB) non-empty blocks including 2 (5.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_15_1 stored as values in memory (estimated size 82.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_15_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 82.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_15_0 stored as values in memory (estimated size 78.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_15_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 78.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1661 bytes result sent to driver
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1661 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 130 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 128 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ResultStage 3 (fold at VertexRDDImpl.scala:90) finished in 0.158 s
+24/12/15 07:06:53 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+24/12/15 07:06:53 INFO DAGScheduler: Job 0 finished: fold at VertexRDDImpl.scala:90, took 1.980575 s
+Number of vertices: 1852
+24/12/15 07:06:53 INFO SparkContext: Starting job: fold at EdgeRDDImpl.scala:90
+24/12/15 07:06:53 INFO DAGScheduler: Got job 1 (fold at EdgeRDDImpl.scala:90) with 2 output partitions
+24/12/15 07:06:53 INFO DAGScheduler: Final stage: ResultStage 4 (fold at EdgeRDDImpl.scala:90)
+24/12/15 07:06:53 INFO DAGScheduler: Parents of final stage: List()
+24/12/15 07:06:53 INFO DAGScheduler: Missing parents: List()
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[21] at map at EdgeRDDImpl.scala:90), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 7.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 3.8 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 4 (MapPartitionsRDD[21] at map at EdgeRDDImpl.scala:90) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8855 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8855 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+24/12/15 07:06:53 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:0+8431
+24/12/15 07:06:53 INFO HadoopRDD: Input split: file:/home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt:8431+8431
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_18_0 stored as values in memory (estimated size 58.0 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_18_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 58.0 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 4.0 (TID 8). 1016 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 8) in 55 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_18_1 stored as values in memory (estimated size 58.0 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_18_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 58.0 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 4.0 (TID 9). 1016 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 9) in 69 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ResultStage 4 (fold at EdgeRDDImpl.scala:90) finished in 0.087 s
+24/12/15 07:06:53 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+24/12/15 07:06:53 INFO DAGScheduler: Job 1 finished: fold at EdgeRDDImpl.scala:90, took 0.099053 s
+Number of edges: 1000
+24/12/15 07:06:53 INFO SparkContext: Starting job: foreachPartition at PageRank.scala:199
+24/12/15 07:06:53 INFO DAGScheduler: Registering RDD 22 (mapPartitions at GraphImpl.scala:207) as input to shuffle 4
+24/12/15 07:06:53 INFO DAGScheduler: Registering RDD 40 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 5
+24/12/15 07:06:53 INFO DAGScheduler: Registering RDD 30 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 3
+24/12/15 07:06:53 INFO DAGScheduler: Registering RDD 44 (mapPartitions at GraphImpl.scala:207) as input to shuffle 7
+24/12/15 07:06:53 INFO DAGScheduler: Registering RDD 52 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 6
+24/12/15 07:06:53 INFO DAGScheduler: Got job 2 (foreachPartition at PageRank.scala:199) with 2 output partitions
+24/12/15 07:06:53 INFO DAGScheduler: Final stage: ResultStage 13 (foreachPartition at PageRank.scala:199)
+24/12/15 07:06:53 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 10)
+24/12/15 07:06:53 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 10)
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 7 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[22] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 9.3 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.8 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.8 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[22] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 7.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 10) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 11) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8844 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 7.0 (TID 10)
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 7.0 (TID 11)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_18_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_18_1 locally
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 7.0 (TID 10). 1225 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 10) in 112 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 7.0 (TID 11). 1225 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 11) in 127 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ShuffleMapStage 7 (mapPartitions at GraphImpl.scala:207) finished in 0.155 s
+24/12/15 07:06:53 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:53 INFO DAGScheduler: running: Set()
+24/12/15 07:06:53 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 10, ShuffleMapStage 11)
+24/12/15 07:06:53 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 9 (ReplicatedVertexView.upgrade(true, false) - shippedVerts true false (broadcast) MapPartitionsRDD[40] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 10.0 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 4.9 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.9 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 9 (ReplicatedVertexView.upgrade(true, false) - shippedVerts true false (broadcast) MapPartitionsRDD[40] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 10 (ReplicatedVertexView.upgrade(true, false) - shippedVerts true false (broadcast) MapPartitionsRDD[30] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 12) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8899 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 13) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8899 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 9.0 (TID 12)
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 9.0 (TID 13)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 8.8 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.5 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 4.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (ReplicatedVertexView.upgrade(true, false) - shippedVerts true false (broadcast) MapPartitionsRDD[30] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 10.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 14) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8899 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 15) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8899 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 10.0 (TID 14)
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 10.0 (TID 15)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_15_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_15_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_15_1 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_15_1 locally
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (2.6 KiB) non-empty blocks including 2 (2.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (2.9 KiB) non-empty blocks including 2 (2.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_26_0 stored as values in memory (estimated size 32.5 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_26_1 stored as values in memory (estimated size 32.3 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_26_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 32.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_26_0 locally
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_36_0 stored as values in memory (estimated size 40.5 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_36_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 9.0 (TID 12). 1225 bytes result sent to driver
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_26_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 32.3 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_26_1 locally
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_36_1 stored as values in memory (estimated size 40.3 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_36_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.3 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 12) in 134 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO Executor: 1 block locks were not released by task 0.0 in stage 10.0 (TID 14)
+[rdd_15_0]
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 10.0 (TID 15). 1225 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 15) in 112 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO Executor: 1 block locks were not released by task 1.0 in stage 9.0 (TID 13)
+[rdd_15_1]
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 10.0 (TID 14). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 14) in 117 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 9.0 (TID 13). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO DAGScheduler: ShuffleMapStage 10 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.142 s
+24/12/15 07:06:53 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:53 INFO DAGScheduler: running: Set(ShuffleMapStage 9)
+24/12/15 07:06:53 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13, ShuffleMapStage 11)
+24/12/15 07:06:53 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 13) in 144 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ShuffleMapStage 9 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.168 s
+24/12/15 07:06:53 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:53 INFO DAGScheduler: running: Set()
+24/12/15 07:06:53 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13, ShuffleMapStage 11)
+24/12/15 07:06:53 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 11 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[44] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 12.1 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.7 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.7 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[44] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 11.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 16) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 9223 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 17) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 9223 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 11.0 (TID 16)
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 11.0 (TID 17)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_18_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_18_1 locally
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_28_0 stored as values in memory (estimated size 58.0 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_28_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 58.0 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_28_1 stored as values in memory (estimated size 58.0 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_28_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 58.0 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.7 KiB) non-empty blocks including 2 (3.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.6 KiB) non-empty blocks including 2 (3.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_38_0 stored as values in memory (estimated size 63.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_38_1 stored as values in memory (estimated size 63.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_38_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 63.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_38_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 63.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO Executor: 2 block locks were not released by task 1.0 in stage 11.0 (TID 17)
+[rdd_18_1, rdd_28_1]
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 11.0 (TID 17). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 17) in 81 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO Executor: 2 block locks were not released by task 0.0 in stage 11.0 (TID 16)
+[rdd_18_0, rdd_28_0]
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 11.0 (TID 16). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 16) in 91 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ShuffleMapStage 11 (mapPartitions at GraphImpl.scala:207) finished in 0.110 s
+24/12/15 07:06:53 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:53 INFO DAGScheduler: running: Set()
+24/12/15 07:06:53 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+24/12/15 07:06:53 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 12 (ReplicatedVertexView.updateVertices - shippedVerts true false (broadcast) MapPartitionsRDD[52] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 11.3 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.4 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (ReplicatedVertexView.updateVertices - shippedVerts true false (broadcast) MapPartitionsRDD[52] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 18) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 9004 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 19) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 9004 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 12.0 (TID 19)
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 12.0 (TID 18)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_1 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_0 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_1 locally
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_36_1 locally
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.6 KiB) non-empty blocks including 2 (3.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.6 KiB) non-empty blocks including 2 (3.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_48_1 stored as values in memory (estimated size 40.3 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_48_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.3 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: 2 block locks were not released by task 1.0 in stage 12.0 (TID 19)
+[rdd_36_1, rdd_48_1]
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_48_0 stored as values in memory (estimated size 40.5 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_48_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 12.0 (TID 19). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO Executor: 2 block locks were not released by task 0.0 in stage 12.0 (TID 18)
+[rdd_36_0, rdd_48_0]
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 19) in 50 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 12.0 (TID 18). 1956 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 18) in 56 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ShuffleMapStage 12 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.073 s
+24/12/15 07:06:53 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:53 INFO DAGScheduler: running: Set()
+24/12/15 07:06:53 INFO DAGScheduler: waiting: Set(ResultStage 13)
+24/12/15 07:06:53 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:53 INFO DAGScheduler: Submitting ResultStage 13 (EdgeRDDImpl[55] at RDD at EdgeRDD.scala:41), which has no missing parents
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 11.7 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.4 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:53 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 13 (EdgeRDDImpl[55] at RDD at EdgeRDD.scala:41) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Adding task set 13.0 with 2 tasks resource profile 0
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 20) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 9275 bytes) 
+24/12/15 07:06:53 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 21) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 9275 bytes) 
+24/12/15 07:06:53 INFO Executor: Running task 0.0 in stage 13.0 (TID 20)
+24/12/15 07:06:53 INFO Executor: Running task 1.0 in stage 13.0 (TID 21)
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_38_1 locally
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO BlockManager: Found block rdd_38_0 locally
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Getting 2 (3.3 KiB) non-empty blocks including 2 (3.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_54_1 stored as values in memory (estimated size 63.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_54_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 63.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO MemoryStore: Block rdd_54_0 stored as values in memory (estimated size 63.6 KiB, free 4.6 GiB)
+24/12/15 07:06:53 INFO BlockManagerInfo: Added rdd_54_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 63.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:53 INFO Executor: 1 block locks were not released by task 0.0 in stage 13.0 (TID 20)
+[rdd_54_0]
+24/12/15 07:06:53 INFO Executor: 1 block locks were not released by task 1.0 in stage 13.0 (TID 21)
+[rdd_54_1]
+24/12/15 07:06:53 INFO Executor: Finished task 0.0 in stage 13.0 (TID 20). 1709 bytes result sent to driver
+24/12/15 07:06:53 INFO Executor: Finished task 1.0 in stage 13.0 (TID 21). 1709 bytes result sent to driver
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 20) in 38 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:53 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 21) in 37 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+24/12/15 07:06:53 INFO DAGScheduler: ResultStage 13 (foreachPartition at PageRank.scala:199) finished in 0.053 s
+24/12/15 07:06:53 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 13: Stage finished
+24/12/15 07:06:53 INFO DAGScheduler: Job 2 finished: foreachPartition at PageRank.scala:199, took 0.621026 s
+24/12/15 07:06:53 INFO PageRank: PageRank finished iteration 0.
+24/12/15 07:06:53 INFO MapPartitionsRDD: Removing RDD 36 from persistence list
+24/12/15 07:06:53 INFO BlockManager: Removing RDD 36
+24/12/15 07:06:53 INFO MapPartitionsRDD: Removing RDD 38 from persistence list
+24/12/15 07:06:53 INFO BlockManager: Removing RDD 38
+24/12/15 07:06:54 INFO SparkContext: Starting job: sum at PageRank.scala:503
+24/12/15 07:06:54 INFO DAGScheduler: Got job 3 (sum at PageRank.scala:503) with 2 output partitions
+24/12/15 07:06:54 INFO DAGScheduler: Final stage: ResultStage 21 (sum at PageRank.scala:503)
+24/12/15 07:06:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 15, ShuffleMapStage 20, ShuffleMapStage 17, ShuffleMapStage 14)
+24/12/15 07:06:54 INFO DAGScheduler: Missing parents: List()
+24/12/15 07:06:54 INFO DAGScheduler: Submitting ResultStage 21 (MapPartitionsRDD[56] at values at PageRank.scala:503), which has no missing parents
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 11.7 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.6 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.6 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:54 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 21 (MapPartitionsRDD[56] at values at PageRank.scala:503) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Adding task set 21.0 with 2 tasks resource profile 0
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 22) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 23) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO Executor: Running task 0.0 in stage 21.0 (TID 22)
+24/12/15 07:06:54 INFO Executor: Running task 1.0 in stage 21.0 (TID 23)
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_0 locally
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_1 locally
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 0.0 in stage 21.0 (TID 22)
+[rdd_48_0]
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 1.0 in stage 21.0 (TID 23)
+[rdd_48_1]
+24/12/15 07:06:54 INFO Executor: Finished task 1.0 in stage 21.0 (TID 23). 1018 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 23) in 38 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:54 INFO Executor: Finished task 0.0 in stage 21.0 (TID 22). 1018 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 22) in 41 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+24/12/15 07:06:54 INFO DAGScheduler: ResultStage 21 (sum at PageRank.scala:503) finished in 0.057 s
+24/12/15 07:06:54 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 21: Stage finished
+24/12/15 07:06:54 INFO DAGScheduler: Job 3 finished: sum at PageRank.scala:503, took 0.069551 s
+24/12/15 07:06:54 INFO SparkContext: Starting job: fold at VertexRDDImpl.scala:90
+24/12/15 07:06:54 INFO DAGScheduler: Got job 4 (fold at VertexRDDImpl.scala:90) with 2 output partitions
+24/12/15 07:06:54 INFO DAGScheduler: Final stage: ResultStage 29 (fold at VertexRDDImpl.scala:90)
+24/12/15 07:06:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 28, ShuffleMapStage 25, ShuffleMapStage 22, ShuffleMapStage 23)
+24/12/15 07:06:54 INFO DAGScheduler: Missing parents: List()
+24/12/15 07:06:54 INFO DAGScheduler: Submitting ResultStage 29 (MapPartitionsRDD[57] at map at VertexRDDImpl.scala:90), which has no missing parents
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 11.5 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.4 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:54 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 29 (MapPartitionsRDD[57] at map at VertexRDDImpl.scala:90) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Adding task set 29.0 with 2 tasks resource profile 0
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 0.0 in stage 29.0 (TID 24) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 1.0 in stage 29.0 (TID 25) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO Executor: Running task 0.0 in stage 29.0 (TID 24)
+24/12/15 07:06:54 INFO Executor: Running task 1.0 in stage 29.0 (TID 25)
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_0 locally
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_1 locally
+24/12/15 07:06:54 INFO Executor: Finished task 0.0 in stage 29.0 (TID 24). 1016 bytes result sent to driver
+24/12/15 07:06:54 INFO Executor: Finished task 1.0 in stage 29.0 (TID 25). 1016 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 0.0 in stage 29.0 (TID 24) in 14 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 1.0 in stage 29.0 (TID 25) in 13 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Removed TaskSet 29.0, whose tasks have all completed, from pool 
+24/12/15 07:06:54 INFO DAGScheduler: ResultStage 29 (fold at VertexRDDImpl.scala:90) finished in 0.030 s
+24/12/15 07:06:54 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 29: Stage finished
+24/12/15 07:06:54 INFO DAGScheduler: Job 4 finished: fold at VertexRDDImpl.scala:90, took 0.044165 s
+Top-ranked vertices:
+24/12/15 07:06:54 INFO SparkContext: Starting job: sortBy at graphx-twitter-PR.scala:50
+24/12/15 07:06:54 INFO DAGScheduler: Got job 5 (sortBy at graphx-twitter-PR.scala:50) with 2 output partitions
+24/12/15 07:06:54 INFO DAGScheduler: Final stage: ResultStage 37 (sortBy at graphx-twitter-PR.scala:50)
+24/12/15 07:06:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 33, ShuffleMapStage 30, ShuffleMapStage 31, ShuffleMapStage 36)
+24/12/15 07:06:54 INFO DAGScheduler: Missing parents: List()
+24/12/15 07:06:54 INFO DAGScheduler: Submitting ResultStage 37 (MapPartitionsRDD[68] at sortBy at graphx-twitter-PR.scala:50), which has no missing parents
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 13.2 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 6.1 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 6.1 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:54 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 37 (MapPartitionsRDD[68] at sortBy at graphx-twitter-PR.scala:50) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Adding task set 37.0 with 2 tasks resource profile 0
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 0.0 in stage 37.0 (TID 26) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 1.0 in stage 37.0 (TID 27) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8983 bytes) 
+24/12/15 07:06:54 INFO Executor: Running task 1.0 in stage 37.0 (TID 27)
+24/12/15 07:06:54 INFO Executor: Running task 0.0 in stage 37.0 (TID 26)
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_1 locally
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_48_0 locally
+24/12/15 07:06:54 INFO MemoryStore: Block rdd_58_1 stored as values in memory (estimated size 40.3 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added rdd_58_1 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.3 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block rdd_58_0 stored as values in memory (estimated size 40.5 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added rdd_58_0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 40.5 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 0.0 in stage 37.0 (TID 26)
+[rdd_58_0]
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 1.0 in stage 37.0 (TID 27)
+[rdd_58_1]
+24/12/15 07:06:54 INFO Executor: Finished task 0.0 in stage 37.0 (TID 26). 1683 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 0.0 in stage 37.0 (TID 26) in 60 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:54 INFO Executor: Finished task 1.0 in stage 37.0 (TID 27). 1683 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 1.0 in stage 37.0 (TID 27) in 63 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Removed TaskSet 37.0, whose tasks have all completed, from pool 
+24/12/15 07:06:54 INFO DAGScheduler: ResultStage 37 (sortBy at graphx-twitter-PR.scala:50) finished in 0.079 s
+24/12/15 07:06:54 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 37: Stage finished
+24/12/15 07:06:54 INFO DAGScheduler: Job 5 finished: sortBy at graphx-twitter-PR.scala:50, took 0.089219 s
+24/12/15 07:06:54 INFO SparkContext: Starting job: take at graphx-twitter-PR.scala:50
+24/12/15 07:06:54 INFO DAGScheduler: Registering RDD 66 (sortBy at graphx-twitter-PR.scala:50) as input to shuffle 9
+24/12/15 07:06:54 INFO DAGScheduler: Got job 6 (take at graphx-twitter-PR.scala:50) with 1 output partitions
+24/12/15 07:06:54 INFO DAGScheduler: Final stage: ResultStage 46 (take at graphx-twitter-PR.scala:50)
+24/12/15 07:06:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 45)
+24/12/15 07:06:54 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 45)
+24/12/15 07:06:54 INFO DAGScheduler: Submitting ShuffleMapStage 45 (MapPartitionsRDD[66] at sortBy at graphx-twitter-PR.scala:50), which has no missing parents
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 12.2 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 5.8 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:54 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 45 (MapPartitionsRDD[66] at sortBy at graphx-twitter-PR.scala:50) (first 15 tasks are for partitions Vector(0, 1))
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Adding task set 45.0 with 2 tasks resource profile 0
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 0.0 in stage 45.0 (TID 28) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, PROCESS_LOCAL, 8972 bytes) 
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 1.0 in stage 45.0 (TID 29) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 1, PROCESS_LOCAL, 8972 bytes) 
+24/12/15 07:06:54 INFO Executor: Running task 0.0 in stage 45.0 (TID 28)
+24/12/15 07:06:54 INFO Executor: Running task 1.0 in stage 45.0 (TID 29)
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_58_0 locally
+24/12/15 07:06:54 INFO BlockManager: Found block rdd_58_1 locally
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 0.0 in stage 45.0 (TID 28)
+[rdd_58_0]
+24/12/15 07:06:54 INFO Executor: 1 block locks were not released by task 1.0 in stage 45.0 (TID 29)
+[rdd_58_1]
+24/12/15 07:06:54 INFO Executor: Finished task 0.0 in stage 45.0 (TID 28). 1225 bytes result sent to driver
+24/12/15 07:06:54 INFO Executor: Finished task 1.0 in stage 45.0 (TID 29). 1225 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 0.0 in stage 45.0 (TID 28) in 47 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/2)
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 1.0 in stage 45.0 (TID 29) in 47 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (2/2)
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Removed TaskSet 45.0, whose tasks have all completed, from pool 
+24/12/15 07:06:54 INFO DAGScheduler: ShuffleMapStage 45 (sortBy at graphx-twitter-PR.scala:50) finished in 0.062 s
+24/12/15 07:06:54 INFO DAGScheduler: looking for newly runnable stages
+24/12/15 07:06:54 INFO DAGScheduler: running: Set()
+24/12/15 07:06:54 INFO DAGScheduler: waiting: Set(ResultStage 46)
+24/12/15 07:06:54 INFO DAGScheduler: failed: Set()
+24/12/15 07:06:54 INFO DAGScheduler: Submitting ResultStage 46 (MapPartitionsRDD[70] at sortBy at graphx-twitter-PR.scala:50), which has no missing parents
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 5.6 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 3.2 KiB, free 4.6 GiB)
+24/12/15 07:06:54 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:33569 (size: 3.2 KiB, free: 4.6 GiB)
+24/12/15 07:06:54 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1540
+24/12/15 07:06:54 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 46 (MapPartitionsRDD[70] at sortBy at graphx-twitter-PR.scala:50) (first 15 tasks are for partitions Vector(0))
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Adding task set 46.0 with 1 tasks resource profile 0
+24/12/15 07:06:54 INFO TaskSetManager: Starting task 0.0 in stage 46.0 (TID 30) (google-vm1.northamerica-northeast2-a.c.ece1724-project.internal, executor driver, partition 0, NODE_LOCAL, 8565 bytes) 
+24/12/15 07:06:54 INFO Executor: Running task 0.0 in stage 46.0 (TID 30)
+24/12/15 07:06:54 INFO ShuffleBlockFetcherIterator: Getting 2 (10.4 KiB) non-empty blocks including 2 (10.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/12/15 07:06:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/12/15 07:06:54 INFO Executor: Finished task 0.0 in stage 46.0 (TID 30). 2253 bytes result sent to driver
+24/12/15 07:06:54 INFO TaskSetManager: Finished task 0.0 in stage 46.0 (TID 30) in 83 ms on google-vm1.northamerica-northeast2-a.c.ece1724-project.internal (executor driver) (1/1)
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Removed TaskSet 46.0, whose tasks have all completed, from pool 
+24/12/15 07:06:54 INFO DAGScheduler: ResultStage 46 (take at graphx-twitter-PR.scala:50) finished in 0.096 s
+24/12/15 07:06:54 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+24/12/15 07:06:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 46: Stage finished
+24/12/15 07:06:54 INFO DAGScheduler: Job 6 finished: take at graphx-twitter-PR.scala:50, took 0.170660 s
+Vertex 8817614 has rank 1.848303393213588
+Vertex 7765128 has rank 1.848303393213588
+Vertex 373584 has rank 1.848303393213588
+Vertex 809432 has rank 1.848303393213588
+Vertex 8801166 has rank 1.848303393213588
+Vertex 3474774 has rank 1.848303393213588
+Vertex 4577522 has rank 1.848303393213588
+Vertex 10906548 has rank 1.848303393213588
+Vertex 7199888 has rank 1.848303393213588
+Vertex 10627982 has rank 1.848303393213588
+24/12/15 07:06:54 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/12/15 07:06:54 INFO SparkUI: Stopped Spark web UI at http://google-vm1.northamerica-northeast2-a.c.ece1724-project.internal:4040
+24/12/15 07:06:54 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/12/15 07:06:54 INFO MemoryStore: MemoryStore cleared
+24/12/15 07:06:54 INFO BlockManager: BlockManager stopped
+24/12/15 07:06:54 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/12/15 07:06:54 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/12/15 07:06:54 INFO SparkContext: Successfully stopped SparkContext
+24/12/15 07:06:54 INFO ShutdownHookManager: Shutdown hook called
+24/12/15 07:06:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-fb88c83f-3a28-4422-87c1-18d9da5a0801
+24/12/15 07:06:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-f5b59188-f5db-4d78-8c3d-00cc1227acc9
+Execution Time: 11 seconds
+Throughput: 98804.64 bytes/second
