@@ -1,0 +1,91 @@
+Linux 5.15.0-1071-gcp (gemini-single-node) 	12/11/24 	_x86_64_	(8 CPU)
+
+05:31:18        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:19        all      4.27      0.00      1.88      0.00      0.00     93.84
+
+05:31:18    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:19     21975852  31653688    618364      1.88    113204   9562700   1456904      4.43   9046396    984860      8480
+
+05:31:19        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:20        all     48.81      0.00     45.42      0.00      0.00      5.77
+
+05:31:19    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:20     21213548  30891384   1379776      4.20    113204   9563304   5253780     15.99   9047240   1788448      8480
+
+05:31:20        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:21        all     86.29      0.00     13.71      0.00      0.00      0.00
+
+05:31:20    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:21     21570636  31248536   1022268      3.11    113204   9563436  11499128     35.00   9046408   1431440      8548
+
+05:31:21        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:22        all     97.50      0.00      2.50      0.00      0.00      0.00
+
+05:31:21    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:22     21560876  31238816   1031656      3.14    113204   9563472  16702872     50.83   9046408   1439540      8544
+
+05:31:22        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:23        all     87.91      0.00     12.09      0.00      0.00      0.00
+
+05:31:22    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:23     21347572  31025512   1245024      3.79    113204   9563480  16733404     50.92   9046408   1622164      8580
+
+05:31:23        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:24        all     84.75      0.00     15.25      0.00      0.00      0.00
+
+05:31:23    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:24     21505516  31183476   1087020      3.31    113204   9563532  16739632     50.94   9046412   1475676      8600
+
+05:31:24        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:25        all     88.74      0.00     11.26      0.00      0.00      0.00
+
+05:31:24    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:25     21392444  31070404   1199964      3.65    113204   9563556  16739780     50.94   9046420   1579072      8600
+
+05:31:25        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:26        all     73.84      0.00     26.16      0.00      0.00      0.00
+
+05:31:25    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:26     21509208  31187168   1083184      3.30    113204   9563556  16738524     50.94   9046408   1475548      8600
+
+05:31:26        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:27        all     87.38      0.00     12.50      0.00      0.00      0.12
+
+05:31:26    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:27     21435144  31113116   1157228      3.52    113204   9563576  16738524     50.94   9046408   1497276      8620
+
+05:31:27        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:28        all     84.29      0.00     15.71      0.00      0.00      0.00
+
+05:31:27    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:28     21501800  31179780   1090572      3.32    113204   9563576  16738524     50.94   9046408   1474896      8620
+
+05:31:28        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:29        all     92.26      0.00      7.74      0.00      0.00      0.00
+
+05:31:28    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:29     21493772  31171772   1098568      3.34    113204   9563596  16739796     50.94   9046412   1481464      8640
+
+05:31:29        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:30        all     75.16      0.00     24.84      0.00      0.00      0.00
+
+05:31:29    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:30     21490092  31168096   1102188      3.35    113204   9563616  16739672     50.94   9046420   1475484      8644
+
+05:31:30        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:31        all     95.11      0.00      4.89      0.00      0.00      0.00
+
+05:31:30    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:31     21487068  31165088   1105228      3.36    113204   9563632  16740916     50.95   9046416   1476312      8660
+
+05:31:31        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:32        all     76.75      0.00     23.25      0.00      0.00      0.00
+
+05:31:31    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:32     21490920  31168940   1101328      3.35    113208   9563636  16740924     50.95   9046408   1475236      8660
+
+05:31:32        CPU     %user     %nice   %system   %iowait    %steal     %idle
+05:31:33        all     97.62      0.00      2.38      0.00      0.00      0.00
+
+05:31:32    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+05:31:33     21489148  31167192   1103076      3.36    113208   9563660  16741236     50.95   9046412   1475908      8680

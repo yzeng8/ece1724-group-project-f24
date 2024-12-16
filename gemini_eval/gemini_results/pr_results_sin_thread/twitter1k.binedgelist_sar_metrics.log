@@ -1,0 +1,19 @@
+Linux 5.15.0-1071-gcp (gemini-single-node) 	12/11/24 	_x86_64_	(8 CPU)
+
+02:10:13        CPU     %user     %nice   %system   %iowait    %steal     %idle
+02:10:14        all     33.58      0.00      7.62      0.00      0.00     58.80
+
+02:10:13    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+02:10:14      2076500  30733208   1500640      4.57    109656  28140540   3986504     12.13  14267844  15293792      8436
+
+02:10:14        CPU     %user     %nice   %system   %iowait    %steal     %idle
+02:10:15        all     78.52      0.00      8.92      0.00      0.00     12.56
+
+02:10:14    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+02:10:15      2075068  30731848   1501892      4.57    109656  28140612   3987636     12.14  14267876  15294632      8500
+
+02:10:15        CPU     %user     %nice   %system   %iowait    %steal     %idle
+02:10:16        all     77.35      0.00      9.89      0.00      0.00     12.77
+
+02:10:15    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+02:10:16      2074644  30731432   1502292      4.57    109656  28140620   3984128     12.12  14267888  15294708      8528

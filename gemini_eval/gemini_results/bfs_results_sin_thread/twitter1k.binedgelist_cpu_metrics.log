@@ -1,0 +1,4 @@
+Linux 5.15.0-1071-gcp (gemini-single-node) 	12/11/24 	_x86_64_	(8 CPU)
+
+01:43:42     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+01:43:43     all    2.62    0.00    2.75    5.74    0.00    0.00    0.00    0.00    0.00   88.89
