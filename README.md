@@ -1,5 +1,5 @@
 # ece1724-group-project-f24
-## 1.Gemini Configuration Instructions
+## 1. Gemini Configuration Instructions
 
 This repository contains the setup and execution instructions for running the Gemini graph processing framework in both single-node and distributed environments. The guide provides detailed steps to replicate the environment, execute the workloads, and analyze the results.
 
@@ -158,16 +158,11 @@ source ~/.bashrc
 ```
 
 ### Step3: Verify Installtion
-
 ```
 spark-shell
 ```
 
-
 ## 2. GraphX Running Instruction
-
-
-
 
 ### Step 1: Compile the scala script 
 ```
@@ -183,9 +178,6 @@ jar -cf graphx-twitter-1k.jar *.class
 spark-submit --class TwitterGraphProcessing1k --master local[*] --driver-memory 1g --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 graphx-twitter-1k.jar
 ```
 where -class is the objectname of your scala script.
-
-
-
 
 
 ## General Running Instruction
