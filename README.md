@@ -1,4 +1,5 @@
 # ece1724-group-project-f24
+
 ## 1. Gemini Configuration Instructions
 
 This repository contains the setup and execution instructions for running the Gemini graph processing framework in both single-node and distributed environments. The guide provides detailed steps to replicate the environment, execute the workloads, and analyze the results.
@@ -123,67 +124,106 @@ Ensure the executables are generated in the `toolkits/` directory.
 - [Apache GraphX](https://spark.apache.org/graphx/)
 
 
-## 2.GraphX Configuration Instructions
+## 2. GraphX Configuration Instructions
 
-### Step 1 Programming Languages Preparatin: Java & Python & Scala Installation
-```
-sudo apt update && sudo apt update && sudo apt upgrade -y
+### Prerequisites
+
+#### System Requirements
+- **Operating System**: Linux-based (tested on Ubuntu 20.04/22.04)
+- **VM Instances**:
+  - Single-node: 1 VM with 8 vCPUs, 32 GB RAM.
+  - Distributed: 2 VMs, each with 8 vCPUs and 32 GB RAM.
+- **Storage**: At least 50 GB free for datasets and logs.
+- **Network**: High-speed network connectivity between distributed VMs.
+
+#### Software Requirements
+- **Java**: OpenJDK 11+
+- **Python**: Version 3.8+ with libraries (`pandas`, `matplotlib`)
+- **Scala**: Version 2.12+
+- **Spark**: Apache Spark 3.4.4 (Hadoop 3 support)
+
+### Setup Instructions
+
+#### 1. Programming Languages Installation
+Install Java, Python, and Scala:
+```bash
+sudo apt update && sudo apt upgrade -y
 sudo apt install openjdk-11-jdk -y
-java -version # Check Java version
+java -version
 sudo apt install python3 python3-pip -y
 python3 --version
-pip3 --version # Check Python version
+pip3 --version
 sudo apt install scala -y
-scala -version # Check Scala version
-
+scala -version
 ```
 
-### Step2: Spark Installation
-```
-## Get the packages
-wget https://downloads.apache.org/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz
-tar -xvzf spark-3.4.4-bin-hadoop3.tgz
-sudo mv spark-3.4.4-bin-hadoop3 /opt/spark
+#### 2. Spark Installation
+1. **Download and Extract Spark**:
+   ```bash
+   wget https://downloads.apache.org/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz
+   tar -xvzf spark-3.4.4-bin-hadoop3.tgz
+   sudo mv spark-3.4.4-bin-hadoop3 /opt/spark
+   ```
 
-## Set Environmental Variables
-vim ~/.bashrc
-# insert into the first line of the file
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export SPARK_HOME=/opt/spark
-export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
-export PYSPARK_PYTHON=python3
-# save and exit
+2. **Configure Environment Variables**:
+   Edit `~/.bashrc`:
+   ```bash
+   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+   export SPARK_HOME=/opt/spark
+   export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
+   export PYSPARK_PYTHON=python3
+   ```
+   Apply changes:
+   ```bash
+   source ~/.bashrc
+   ```
 
-source ~/.bashrc
-```
-
-### Step3: Verify Installtion
-```
+#### 3. Verify Installation
+Run the Spark shell:
+```bash
 spark-shell
 ```
 
-## 2. GraphX Running Instruction
+### Running GraphX Jobs
 
-### Step 1: Compile the scala script 
-```
+#### 1. Compile the Scala Script
+Use `scalac` to compile your GraphX script:
+```bash
 scalac -classpath "/opt/spark/jars/*" graphx-twitter-1k.scala
 ```
-### Step 2: Package All Class Files to a Jar File
-```
+
+#### 2. Package Class Files into a JAR
+Create a JAR file for execution:
+```bash
 jar -cf graphx-twitter-1k.jar *.class
 ```
 
-### Step 3: Run the Spark Job Use spark-submit with specification of driver memory of 1G, Apache Package of Graph X.  
+#### 3. Run the Spark Job
+Submit the GraphX job using `spark-submit`:
+```bash
+spark-submit --class TwitterGraphProcessing1k \
+  --master local[*] \
+  --driver-memory 1g \
+  --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 \
+  graphx-twitter-1k.jar
 ```
-spark-submit --class TwitterGraphProcessing1k --master local[*] --driver-memory 1g --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 graphx-twitter-1k.jar
-```
-where -class is the objectname of your scala script.
 
-
-## General Running Instruction
-```
+### General Running Instructions
+To compile, package, and run GraphX scripts:
+```bash
 scalac -classpath "/opt/spark/jars/*" graphx-twitter-PR.scala
-jar -cf graphXtwitterPR\.jar *.class
+jar -cf graphXtwitterPR.jar *.class
+spark-submit --class graphXtwitterPR \
+  --master local[*] \
+  --driver-memory 4g \
+  --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 \
+  graphXtwitterPR.jar file:///home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt 1
+```
 
-spark-submit --class graphXtwitterPR --master local[*] --driver-memory 2g --packages org.apache.spark:spark-graphx_2.12:3.4.4,graphframes:graphframes:0.8.3-spark3.4-s_2.12 graphXtwitterPR.jar file:///home/zengyuyang1999/ece1724-group-project-f24/ece1724-project/data/twitter-2010-1k.txt 1
- ```
+### Results
+- **Metrics Collected**:
+  - Execution time
+  - CPU utilization
+  - Memory usage
+- **Visualization**:
+  Results are stored in CSV format and visualized using Python scripts.
