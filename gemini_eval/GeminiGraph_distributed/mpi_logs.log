@@ -1,0 +1,16 @@
+Rank 0 - MPI_Recv: Source=0, Count=1661144, Tag=0 - Time: 0.000857137s
+Rank 0 - MPI_Send: Dest=0, Count=1661144, Tag=0 - Time: 0.00295268s
+Rank 0 - MPI_Send: Dest=0, Count=1, Tag=0 - Time: 2.183e-06s
+Rank 0 - MPI_Recv: Source=0, Count=1, Tag=0 - Time: 3.603e-06s
+Rank 0 - MPI_Send: Dest=0, Count=1661144, Tag=0 - Time: 0.00014018s
+Rank 0 - MPI_Recv: Source=0, Count=1661144, Tag=0 - Time: 0.000134894s
+Rank 0 - MPI_Send: Dest=0, Count=1, Tag=0 - Time: 1.205e-06s
+Rank 0 - MPI_Recv: Source=0, Count=1, Tag=0 - Time: 1.064e-06s
+Rank 0 - MPI_Send: Dest=0, Count=1661144, Tag=0 - Time: 0.00298332s
+Rank 0 - MPI_Recv: Source=0, Count=1661144, Tag=0 - Time: 0.000876645s
+Rank 0 - MPI_Send: Dest=0, Count=1, Tag=0 - Time: 2.681e-06s
+Rank 0 - MPI_Recv: Source=0, Count=1, Tag=0 - Time: 3.803e-06s
+Rank 0 - MPI_Send: Dest=0, Count=1661144, Tag=0 - Time: 0.000152083s
+Rank 0 - MPI_Recv: Source=0, Count=1661144, Tag=0 - Time: 0.000146844s
+Rank 0 - MPI_Send: Dest=0, Count=1, Tag=0 - Time: 1.18e-06s
+Rank 0 - MPI_Recv: Source=0, Count=1, Tag=0 - Time: 1.199e-06s
